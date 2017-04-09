@@ -1,0 +1,86 @@
+
+
+.Section {
+  padding: 32rem 0;
+}
+
+
+/* Nav-Bar Stuff -------------------------------*/
+
+.nav-bar {
+  list-style:none;
+  border-bottom: .2px solid #fff;
+}
+
+.navbar-list {
+  margin: 0px;
+  float: right;
+
+}
+
+.navbar-item {
+  margin: 0px;
+  padding: 2rem;
+}
+
+li {
+  list-style: none;
+  text-transform: capitalize;
+}
+
+a {
+  padding-right: 3.5rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+}
+
+a:link, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+#logo {
+  padding: 2rem 2rem 2rem 4rem;
+  float: left;
+}
+
+/* Section-Hero ---------------------------------*/
+
+.Hero {
+  height: 190px;
+  background-image: url('../image/photo.jpg');
+  background-size: cover;
+}
+
+.Greet {
+  text-align: center;
+  font-family: "Raleway";
+  color: #fff;
+  padding: 4rem;
+}
+
+/* Section-Invite --------------------------------*/
+
+.Invite {
+  padding: 8rem 0;
+  color: #333333;
+}
+
+.getInvite h3 {
+  text-align: center;
+  font-size:3rem;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+/* Section-ShowCase ------------------------------*/
+
+.Section-ShowCase {
+  padding: 3rem 0;
+  background-color: #333333;
+}
+
+.ShowImage {
+  padding: 3rem;
+}
