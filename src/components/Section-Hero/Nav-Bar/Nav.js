@@ -1,27 +1,38 @@
 import React from 'react';
 
 
-const Nav = () => {
-  const Links=["Our Store", "Our Offer", "Gallery", "Menu", "Contact"];
+export default class Nav extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = { lift: "lift"};
+  }
+
+  handleMouseEnter = (props) => {
+    console.log('event activated')
+    const newState="lift-active";
+    this.setState({ lift: newState });
+  };
+
+  handleMouseLeave = (props) => {
+    const newState="lift";
+    this.setState({ lift: newState });
+  };
+
+  render() {
+    const setClass=this.state.lift;
+    return (
+      <nav className="twelve columns nav-bar">
+          <a id="sideKick" href="">got beans?</a>
+          <Login handleMouseLeave={ this.handleMouseLeave } handleMouseEnter={ this.handleMouseEnter} setClass={ setClass }/>
+      </nav>
+    )
+  };
+}
+
+const Login = (props) => {
   return (
-    <nav className="twelve columns nav-bar">
-        <a id="logo" href="">Koffee</a>
-        <ul className="navbar-list">
-            <Link Link={ Links }/>
-        </ul>
-    </nav>
+      <a id="login" href="/Login" className={ props.setClass } onMouseEnter={ props.handleMouseEnter} onMouseLeave={ props.handleMouseLeave } >
+        <span >Login</span>
+      </a>
   )
 };
-
-const Link = (props) => {
-  const ListItems = props.Link.map((key) =>
-    <a href="" className="navbar-link">{key}</a>
-  );
-  return (
-    <li className="navbar-item">
-      { ListItems }
-    </li>
-  )
-};
-
-export default Nav;

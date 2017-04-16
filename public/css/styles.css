@@ -1,48 +1,66 @@
+@font-face {
+    font-family: 'atc_harrisregular';
+    src: url('../Regular/atcharris-regular-webfont.eot');
+    src: url('../Regular/atcharris-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Regular/atcharris-regular-webfont.woff2') format('woff2'),
+         url('../Regular/atcharris-regular-webfont.woff') format('woff'),
+         url('../Regular/atcharris-regular-webfont.ttf') format('truetype'),
+         url('../Regular/atcharris-regular-webfont.svg#atc_harrisregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'atc_harrislight';
+    src: url('../Light/atcharris-light-webfont.eot');
+    src: url('../Light/atcharris-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Light/atcharris-light-webfont.woff2') format('woff2'),
+         url('../Light/atcharris-light-webfont.woff') format('woff'),
+         url('../Light/atcharris-light-webfont.ttf') format('truetype'),
+         url('../Light/atcharris-light-webfont.svg#atc_harrislight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
+body {
+  font-family: "atc_harrisregular";
+}
 
 .Section {
   padding: 32rem 0;
+  height: 100vh;
 }
-
 
 /* Nav-Bar Stuff -------------------------------*/
 
 .nav-bar {
-  list-style:none;
-  border-bottom: .2px solid #fff;
+  text-align: center;
+  position: fixed;
+  font-family: 'atc_harrislight';
+  background-color: #EB0028;
+  padding: 2rem 0 2rem 0;
+  top: 0;
+  z-index: 9999;
 }
 
-.navbar-list {
-  margin: 0px;
-  float: right;
-
-}
-
-.navbar-item {
-  margin: 0px;
-  padding: 2rem;
-}
-
-li {
-  list-style: none;
-  text-transform: capitalize;
-}
-
-a {
-  padding-right: 3.5rem;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: .3rem;
-}
 
 a:link, a:hover, a:visited, a:active {
+  color: #fffaff;
   text-decoration: none;
-  color: #fff;
 }
 
 #logo {
-  padding: 2rem 2rem 2rem 4rem;
+  color: #fffaff;
+  letter-spacing: .2rem;
+}
+#sideKick {
   float: left;
+  padding-left: 4rem;
+  letter-spacing: .2rem;
+}
+#login {
+  float: right;
+  padding-right: 4rem;
+  letter-spacing: .2rem;
 }
 
 /* Section-Hero ---------------------------------*/
@@ -53,34 +71,93 @@ a:link, a:hover, a:visited, a:active {
   background-size: cover;
 }
 
-.Greet {
+.subHeader {
+  font-family: "atc_harrislight";
+  display: block;
   text-align: center;
-  font-family: "Raleway";
-  color: #fff;
-  padding: 4rem;
+  font-size: 4rem;
+  color: #fffaff;
+  text-transform: lowercase;
+  margin-top: 6rem;
 }
-
 /* Section-Invite --------------------------------*/
 
 .Invite {
   padding: 8rem 0;
-  color: #333333;
+  letter-spacing: .1rem;
+  color: #EB0028;
+  text-align: center;
 }
 
-.getInvite h3 {
-  text-align: center;
-  font-size:3rem;
-  font-weight: 400;
-  text-transform: lowercase;
+.getInvite {
+  font-family: "atc_harrisregular";
+  font-size: 2rem;
 }
 
 /* Section-ShowCase ------------------------------*/
 
-.Section-ShowCase {
-  padding: 3rem 0;
-  background-color: #333333;
+.Slide {
+  height: 190px;
+  margin: 0px 6rem 0px 6rem;
+  background-size: cover;
 }
 
-.ShowImage {
-  padding: 3rem;
+.aButton {
+  float: right;
+}
+
+
+
+/* Form-Section ----------------------------------*/
+
+.login-section {
+  padding: 15rem 32rem 32rem 32rem;
+  height: 100vh;
+}
+.form-login {
+  background-color: #EB0028;
+  height: 50%;
+  width: 50%;
+  padding: 17rem 17rem 10rem 17rem;
+  margin-left: 7rem;
+}
+.login-form {
+  display: flex;
+  justify-content: center;
+}
+
+
+.Error {
+  font-family: "atc_harrislight";
+  font-size: 5rem;
+}
+
+
+.lift {
+  transition: all .3s;
+  transform: translateY(0%);
+}
+
+.lift-active {
+  transition: all .3s;
+  transform: translateY(-30%);
+}
+
+
+.carousel-enter {
+  transition: all 2s;
+  transform: translateX(-500%)
+}
+
+.carousel-enter-active {
+  transform: translateX(0%);
+}
+
+.carousel-leave {
+  transition: all 2s;
+  transform: translateX(0%);
+}
+
+.carousel-leave-active {
+  transform: translateX(-150%);
 }

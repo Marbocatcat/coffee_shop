@@ -2,12 +2,12 @@ import React from 'react';
 
 
 const InviteRoot = () => {
-  const message = "Koffee Shop is a unique coffee shop located at the heart of Chicago aimed to server your inner hipster. Not Showering for weeks is welcome and is encouraged here.";
+  const title = "The Story"
   return (
     <div className="Invite">
       <div className="container">
         <div className="row">
-          <Invite message={ message } />
+          <Invite title={ title } />
         </div>
       </div>
     </div>
@@ -17,7 +17,9 @@ const InviteRoot = () => {
 const Invite = (props) => {
   return (
     <div className="getInvite">
-      <h3>{ props.message }</h3>
+      <span>
+        { props.title }
+      </span>
     </div>
   )
 };
